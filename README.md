@@ -1,1 +1,1 @@
-# LightHouse Ads
+# Lighthouse Ads
