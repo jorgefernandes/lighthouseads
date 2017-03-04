@@ -1,0 +1,117 @@
+{
+  // Default options
+  'functions': true,
+  'variableNameTransforms': ['dasherize']
+}
+
+{{#block "sprites-comment"}}
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+{{/block}}
+
+
+{{#block "sprites"}}
+{{#each sprites}}
+${{prefixo}}{{strings.name_name}}: '{{name}}';
+${{prefixo}}{{strings.name_x}}: {{px.x}};
+${{prefixo}}{{strings.name_y}}: {{px.y}};
+${{prefixo}}{{strings.name_offset_x}}: {{px.offset_x}};
+${{prefixo}}{{strings.name_offset_y}}: {{px.offset_y}};
+${{prefixo}}{{strings.name_width}}: {{px.width}};
+${{prefixo}}{{strings.name_height}}: {{px.height}};
+${{prefixo}}{{strings.name_total_width}}: {{px.total_width}};
+${{prefixo}}{{strings.name_total_height}}: {{px.total_height}};
+${{prefixo}}{{strings.name_image}}: '{{{escaped_image}}}';
+${{prefixo}}{{strings.name}}: ({{px.x}}, {{px.y}}, {{px.offset_x}}, {{px.offset_y}}, {{px.width}}, {{px.height}}, {{px.total_width}}, {{px.total_height}}, '{{{escaped_image}}}', '{{name}}', );
+{{/each}}
+{{/block}}
+
+
+{{#block "spritesheet"}}
+${{prefixo}}{{spritesheet_info.strings.name_width}}: {{spritesheet.px.width}};
+${{prefixo}}{{spritesheet_info.strings.name_height}}: {{spritesheet.px.height}};
+${{prefixo}}{{spritesheet_info.strings.name_image}}: '{{{spritesheet.escaped_image}}}';
+${{prefixo}}{{spritesheet_info.strings.name_sprites}}: ({{#each sprites}}${{prefixo}}{{strings.name}}, {{/each}});
+${{prefixo}}{{spritesheet_info.strings.name}}: ({{spritesheet.px.width}}, {{spritesheet.px.height}}, '{{{spritesheet.escaped_image}}}', ${{prefixo}}{{spritesheet_info.strings.name_sprites}}, );
+{{/block}}
+
+{{#block "sprite-functions-comment"}}
+{{#if options.functions}}
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+{{/if}}
+{{/block}}
+
+
+{{#block "sprite-functions"}}
+{{#if options.functions}}
+@mixin {{prefixo}}sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin {{prefixo}}sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin {{prefixo}}sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin {{prefixo}}sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin {{prefixo}}sprite($sprite) {
+  @include {{prefixo}}sprite-image($sprite);
+  @include {{prefixo}}sprite-position($sprite);
+  @include {{prefixo}}sprite-width($sprite);
+  @include {{prefixo}}sprite-height($sprite);
+}
+{{/if}}
+{{/block}}
+
+{{#block "spritesheet-functions-comment"}}
+{{#if options.functions}}
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+{{/if}}
+{{/block}}
+{{#block "spritesheet-functions"}}
+{{#if options.functions}}
+@mixin {{prefixo}}sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+{{/if}}
+{{/block}}
