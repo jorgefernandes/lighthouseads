@@ -1,0 +1,26 @@
+@mixin breakpoint($name) {
+	// Mobile
+	@if $name == mobile OR $name == mobile--e-abaixo {
+		@media screen and (max-width: 767px) { @content; }
+	}
+
+
+	// Tablet
+	@if $name == tablet {
+		@media screen and (min-width: 768px) and (max-width: 1207px) { @content; }
+	}
+
+	@if $name == tablet--e-abaixo {
+		@media screen and (max-width: 1207px) { @content; }
+	}
+
+	@if $name == tablet--e-acima {
+		@media screen and (min-width: 768px) { @content; }
+	}
+
+
+	// Desktop
+	@if $name == desktop OR $name == desktop--e-acima  {
+		@media screen and (min-width: 1208px) { @content; }
+	}
+}

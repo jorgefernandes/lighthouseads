@@ -1,0 +1,21 @@
+.hidden {
+	display: none !important;
+}
+
+.show {
+	display: block !important;
+}
+
+.db-desktop {
+	@include breakpoint('mobile') {
+		display: none !important;
+	}
+}
+
+.db-mobile {
+	display: none !important;
+
+	@include breakpoint('mobile') {
+		display: inline-block !important;
+	}
+}

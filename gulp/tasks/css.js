@@ -7,7 +7,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var config = require('../config');
 var handleErrors = require('../utils/handleErrors');
 var browserSync = require("browser-sync");
-var cleanCSS = require('gulp-clean-css');
+var minifyCSS = require('gulp-minify-css');
 var plumber = require('gulp-plumber');
 
 
@@ -27,6 +27,6 @@ gulp.task('css-build', function() {
 		.pipe(plumber())
 		.pipe(sass().on('error', handleErrors))
 		.pipe(autoprefixer({browsers: ["> 5% in BR", "ie >= 9", "not ie < 9"]}))
-		.pipe(cleanCSS())
+		.pipe(minifyCSS())
 		.pipe(gulp.dest(config.css.dst))
 });

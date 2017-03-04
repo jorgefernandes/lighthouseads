@@ -1,0 +1,186 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+
+
+$s-icons-icon-email-small-name: 'icon-email--small';
+$s-icons-icon-email-small-x: 221px;
+$s-icons-icon-email-small-y: 154px;
+$s-icons-icon-email-small-offset-x: -221px;
+$s-icons-icon-email-small-offset-y: -154px;
+$s-icons-icon-email-small-width: 36px;
+$s-icons-icon-email-small-height: 36px;
+$s-icons-icon-email-small-total-width: 294px;
+$s-icons-icon-email-small-total-height: 244px;
+$s-icons-icon-email-small-image: '../images/sprites/icons.png';
+$s-icons-icon-email-small: (221px, 154px, -221px, -154px, 36px, 36px, 294px, 244px, '../images/sprites/icons.png', 'icon-email--small', );
+$s-icons-icon-email-name: 'icon-email';
+$s-icons-icon-email-x: 78px;
+$s-icons-icon-email-y: 130px;
+$s-icons-icon-email-offset-x: -78px;
+$s-icons-icon-email-offset-y: -130px;
+$s-icons-icon-email-width: 73px;
+$s-icons-icon-email-height: 72px;
+$s-icons-icon-email-total-width: 294px;
+$s-icons-icon-email-total-height: 244px;
+$s-icons-icon-email-image: '../images/sprites/icons.png';
+$s-icons-icon-email: (78px, 130px, -78px, -130px, 73px, 72px, 294px, 244px, '../images/sprites/icons.png', 'icon-email', );
+$s-icons-icon-fb-small-name: 'icon-fb--small';
+$s-icons-icon-fb-small-x: 156px;
+$s-icons-icon-fb-small-y: 130px;
+$s-icons-icon-fb-small-offset-x: -156px;
+$s-icons-icon-fb-small-offset-y: -130px;
+$s-icons-icon-fb-small-width: 36px;
+$s-icons-icon-fb-small-height: 36px;
+$s-icons-icon-fb-small-total-width: 294px;
+$s-icons-icon-fb-small-total-height: 244px;
+$s-icons-icon-fb-small-image: '../images/sprites/icons.png';
+$s-icons-icon-fb-small: (156px, 130px, -156px, -130px, 36px, 36px, 294px, 244px, '../images/sprites/icons.png', 'icon-fb--small', );
+$s-icons-icon-fb-name: 'icon-fb';
+$s-icons-icon-fb-x: 221px;
+$s-icons-icon-fb-y: 0px;
+$s-icons-icon-fb-offset-x: -221px;
+$s-icons-icon-fb-offset-y: 0px;
+$s-icons-icon-fb-width: 73px;
+$s-icons-icon-fb-height: 72px;
+$s-icons-icon-fb-total-width: 294px;
+$s-icons-icon-fb-total-height: 244px;
+$s-icons-icon-fb-image: '../images/sprites/icons.png';
+$s-icons-icon-fb: (221px, 0px, -221px, 0px, 73px, 72px, 294px, 244px, '../images/sprites/icons.png', 'icon-fb', );
+$s-icons-icon-google-small-name: 'icon-google--small';
+$s-icons-icon-google-small-x: 0px;
+$s-icons-icon-google-small-y: 208px;
+$s-icons-icon-google-small-offset-x: 0px;
+$s-icons-icon-google-small-offset-y: -208px;
+$s-icons-icon-google-small-width: 36px;
+$s-icons-icon-google-small-height: 36px;
+$s-icons-icon-google-small-total-width: 294px;
+$s-icons-icon-google-small-total-height: 244px;
+$s-icons-icon-google-small-image: '../images/sprites/icons.png';
+$s-icons-icon-google-small: (0px, 208px, 0px, -208px, 36px, 36px, 294px, 244px, '../images/sprites/icons.png', 'icon-google--small', );
+$s-icons-icon-google-name: 'icon-google';
+$s-icons-icon-google-x: 221px;
+$s-icons-icon-google-y: 77px;
+$s-icons-icon-google-offset-x: -221px;
+$s-icons-icon-google-offset-y: -77px;
+$s-icons-icon-google-width: 73px;
+$s-icons-icon-google-height: 72px;
+$s-icons-icon-google-total-width: 294px;
+$s-icons-icon-google-total-height: 244px;
+$s-icons-icon-google-image: '../images/sprites/icons.png';
+$s-icons-icon-google: (221px, 77px, -221px, -77px, 73px, 72px, 294px, 244px, '../images/sprites/icons.png', 'icon-google', );
+$s-icons-icon-no-results-name: 'icon-no-results';
+$s-icons-icon-no-results-x: 0px;
+$s-icons-icon-no-results-y: 0px;
+$s-icons-icon-no-results-offset-x: 0px;
+$s-icons-icon-no-results-offset-y: 0px;
+$s-icons-icon-no-results-width: 216px;
+$s-icons-icon-no-results-height: 125px;
+$s-icons-icon-no-results-total-width: 294px;
+$s-icons-icon-no-results-total-height: 244px;
+$s-icons-icon-no-results-image: '../images/sprites/icons.png';
+$s-icons-icon-no-results: (0px, 0px, 0px, 0px, 216px, 125px, 294px, 244px, '../images/sprites/icons.png', 'icon-no-results', );
+$s-icons-icon-search-name: 'icon-search';
+$s-icons-icon-search-x: 262px;
+$s-icons-icon-search-y: 154px;
+$s-icons-icon-search-offset-x: -262px;
+$s-icons-icon-search-offset-y: -154px;
+$s-icons-icon-search-width: 28px;
+$s-icons-icon-search-height: 30px;
+$s-icons-icon-search-total-width: 294px;
+$s-icons-icon-search-total-height: 244px;
+$s-icons-icon-search-image: '../images/sprites/icons.png';
+$s-icons-icon-search: (262px, 154px, -262px, -154px, 28px, 30px, 294px, 244px, '../images/sprites/icons.png', 'icon-search', );
+$s-icons-icon-twitter-small-name: 'icon-twitter--small';
+$s-icons-icon-twitter-small-x: 41px;
+$s-icons-icon-twitter-small-y: 208px;
+$s-icons-icon-twitter-small-offset-x: -41px;
+$s-icons-icon-twitter-small-offset-y: -208px;
+$s-icons-icon-twitter-small-width: 36px;
+$s-icons-icon-twitter-small-height: 36px;
+$s-icons-icon-twitter-small-total-width: 294px;
+$s-icons-icon-twitter-small-total-height: 244px;
+$s-icons-icon-twitter-small-image: '../images/sprites/icons.png';
+$s-icons-icon-twitter-small: (41px, 208px, -41px, -208px, 36px, 36px, 294px, 244px, '../images/sprites/icons.png', 'icon-twitter--small', );
+$s-icons-icon-twitter-name: 'icon-twitter';
+$s-icons-icon-twitter-x: 0px;
+$s-icons-icon-twitter-y: 130px;
+$s-icons-icon-twitter-offset-x: 0px;
+$s-icons-icon-twitter-offset-y: -130px;
+$s-icons-icon-twitter-width: 73px;
+$s-icons-icon-twitter-height: 73px;
+$s-icons-icon-twitter-total-width: 294px;
+$s-icons-icon-twitter-total-height: 244px;
+$s-icons-icon-twitter-image: '../images/sprites/icons.png';
+$s-icons-icon-twitter: (0px, 130px, 0px, -130px, 73px, 73px, 294px, 244px, '../images/sprites/icons.png', 'icon-twitter', );
+
+
+$s-icons-spritesheet-width: 294px;
+$s-icons-spritesheet-height: 244px;
+$s-icons-spritesheet-image: '../images/sprites/icons.png';
+$s-icons-spritesheet-sprites: ($s-icons-icon-email-small, $s-icons-icon-email, $s-icons-icon-fb-small, $s-icons-icon-fb, $s-icons-icon-google-small, $s-icons-icon-google, $s-icons-icon-no-results, $s-icons-icon-search, $s-icons-icon-twitter-small, $s-icons-icon-twitter, );
+$s-icons-spritesheet: (294px, 244px, '../images/sprites/icons.png', $s-icons-spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+
+
+@mixin s-icons-sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin s-icons-sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin s-icons-sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin s-icons-sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin s-icons-sprite($sprite) {
+  @include s-icons-sprite-image($sprite);
+  @include s-icons-sprite-position($sprite);
+  @include s-icons-sprite-width($sprite);
+  @include s-icons-sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin s-icons-sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

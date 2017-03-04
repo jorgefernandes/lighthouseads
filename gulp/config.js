@@ -151,7 +151,7 @@ module.exports = {
 	html: {
 		baseRender: src+'/',
 		src: [src+'/**/*.html', '!'+src+'/html-parts/**/*', '!'+src+'/files/**/*', '!'+src+'/scripts/**/*', '!'+src+'/css/**/*', '!'+src+'/vendor/**/*'],
-		watch: src+'/**/*.html',
+		watch: src+'/**/*.+(html|json)',
 		dst: dst,
 		minifyDistHtml: false
 	},

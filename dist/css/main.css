@@ -1,0 +1,127 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  border: none;
+  background: none; }
+
+:focus {
+  outline: none; }
+
+@font-face {
+  font-family: "bebasregular";
+  src: url("../files/fonts/bebas__-webfon.eot?") format("eot"), url("../files/fonts/bebas__-webfon.woff2") format("woff2"), url("../files/fonts/bebas__-webfon.woff") format("woff"), url("../files/fonts/bebas__-webfon.ttf") format("truetype"), url("../files/fonts/bebas__-webfon.svg#bebasregular") format("svg"); }
+
+@font-face {
+  font-family: "bebas_kairegular";
+  src: url("../files/fonts/bebaskai-regular-webfont.eot?") format("eot"), url("../files/fonts/bebaskai-regular-webfont.woff2") format("woff2"), url("../files/fonts/bebaskai-regular-webfont.woff") format("woff"), url("../files/fonts/bebaskai-regular-webfont.ttf") format("truetype"), url("../files/fonts/bebaskai-regular-webfont.svg#bebas_kairegular") format("svg"); }
+
+@font-face {
+  font-family: "bebas_neuebold";
+  src: url("../files/fonts/bebasneue_bold-webfont.eot?") format("eot"), url("../files/fonts/bebasneue_bold-webfont.woff2") format("woff2"), url("../files/fonts/bebasneue_bold-webfont.woff") format("woff"), url("../files/fonts/bebasneue_bold-webfont.ttf") format("truetype"), url("../files/fonts/bebasneue_bold-webfont.svg#bebas_neuebold") format("svg"); }
+
+@font-face {
+  font-family: "bebas_neuebook";
+  src: url("../files/fonts/bebasneue_book-webfont.eot?") format("eot"), url("../files/fonts/bebasneue_book-webfont.woff2") format("woff2"), url("../files/fonts/bebasneue_book-webfont.woff") format("woff"), url("../files/fonts/bebasneue_book-webfont.ttf") format("truetype"), url("../files/fonts/bebasneue_book-webfont.svg#bebas_neuebook") format("svg"); }
+
+@font-face {
+  font-family: "bebas_neuelight";
+  src: url("../files/fonts/bebasneue_light-webfont.eot?") format("eot"), url("../files/fonts/bebasneue_light-webfont.woff2") format("woff2"), url("../files/fonts/bebasneue_light-webfont.woff") format("woff"), url("../files/fonts/bebasneue_light-webfont.ttf") format("truetype"), url("../files/fonts/bebasneue_light-webfont.svg#bebas_neuelight") format("svg"); }
+
+@font-face {
+  font-family: "bebas_neue_regularregular";
+  src: url("../files/fonts/bebasneue_regular_-_u043au043eu043fu0438u044f_2-webfont.eot?") format("eot"), url("../files/fonts/bebasneue_regular_-_u043au043eu043fu0438u044f_2-webfont.woff2") format("woff2"), url("../files/fonts/bebasneue_regular_-_u043au043eu043fu0438u044f_2-webfont.woff") format("woff"), url("../files/fonts/bebasneue_regular_-_u043au043eu043fu0438u044f_2-webfont.ttf") format("truetype"), url("../files/fonts/bebasneue_regular_-_u043au043eu043fu0438u044f_2-webfont.svg#bebas_neue_regularregular") format("svg"); }
+
+@font-face {
+  font-family: "bebas_neuethin";
+  src: url("../files/fonts/bebasneue_thin-webfont.eot?") format("eot"), url("../files/fonts/bebasneue_thin-webfont.woff2") format("woff2"), url("../files/fonts/bebasneue_thin-webfont.woff") format("woff"), url("../files/fonts/bebasneue_thin-webfont.ttf") format("truetype"), url("../files/fonts/bebasneue_thin-webfont.svg#bebas_neuethin") format("svg"); }
+
+@font-face {
+  font-family: "bebas_neueregular";
+  src: url("../files/fonts/bebasneue-webfont.eot?") format("eot"), url("../files/fonts/bebasneue-webfont.woff2") format("woff2"), url("../files/fonts/bebasneue-webfont.woff") format("woff"), url("../files/fonts/bebasneue-webfont.ttf") format("truetype"), url("../files/fonts/bebasneue-webfont.svg#bebas_neueregular") format("svg"); }
+
+input {
+  border: 0; }
+
+img,
+picture,
+video,
+embed {
+  font-style: italic;
+  vertical-align: middle; }
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit; }
+  a:active, a:hover {
+    outline: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  font-family: "bebas_neuelight";
+  font-size: 16px;
+  color: #FFFFFF;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/*# sourceMappingURL=main.css.map */

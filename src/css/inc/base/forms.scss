@@ -1,0 +1,51 @@
+input {
+    border: 0;
+
+    // Remove borda redonda em campos de formulario
+    // em aparelhos IOS.
+   //  -webkit-appearance:none;
+   // -webkit-border-radius:0px;
+}
+
+// textarea {
+// 	resize:none;
+// 	color: $sasha-gray;
+// 	font-family: $noto-sans-regular;
+// 	overflow: auto;
+// }
+//
+// ::-webkit-input-placeholder {
+// 	font-size: 16px;
+// 	font-family: $noto-sans-italic;
+// 	color: $basic-gray;
+// 	opacity: .7;
+// }
+//
+// ::-moz-placeholder {
+// 	font-size: 16px;
+// 	font-family: $noto-sans-italic;
+// 	color: $basic-gray;
+// 	opacity: .7;
+// }
+//
+// :-ms-input-placeholder {
+// 	font-size: 16px;
+// 	font-family: $noto-sans-italic;
+// 	color: $basic-gray;
+// 	opacity: .7;
+// }
+
+// Mudar a cor do value no IE9, pois não suporta placeholder.
+// [placeholder] {
+// 	font-size: 16px !important;
+// 	font-family: $noto-sans-italic;
+// 	opacity: .7;
+// 	color: $basic-gray !important;
+
+// 	&:focus {
+// 		font-size: 20px !important;
+// 		font-family: $noto-sans-regular;
+// 		opacity: 1;
+// 		color: $sasha-gray !important;
+// 	}
+// }

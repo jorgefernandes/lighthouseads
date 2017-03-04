@@ -1,0 +1,13 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: $bebas_neulight;
+	font-size: $base-font-size;
+	color: $ui-white;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
